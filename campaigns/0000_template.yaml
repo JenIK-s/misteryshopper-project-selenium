@@ -1,0 +1,43 @@
+adv_login:
+  # id of a campaign
+  - campaign_id: test_adv
+    test_case:
+      - title: 'Deeplink'
+               'Repeat order'
+               'Admitad - Context (other paid source)'
+               'Context (other paid source) - Admitad'
+        steps:
+          # target url, should be a deeplink to product page
+          - action: goto
+            url: 'AFFILIATE_DEEPLINK'
+          # in case there is a popup which can be closed with ESCAPE button - selector is not to be added
+          # add product to cart, click button
+          - action: close_popup_window, click_object, click_add_to_cart, click_confirm_order, click_confirm_payment
+            selector: 'CSS_SELECTOR_or_full_XPATH'
+          # make screenshot (cart etc)
+          - action: make_screenshot
+          # type-in any text fields
+          - action: type_in_data
+            selector: 'CSS_SELECTOR_or_full_XPATH'
+            text: '33101'
+                  'New York'
+                  '407-408-7313'
+                  'Testing'
+                  'Testings'
+                  'testings@testmail.com'
+                  'testing address 111'
+          # in case additional load time is required, in secs
+          - action: wait
+            value: '10'
+          # in case need to scroll page, by 250 px
+          - action: scroll
+          # in case need to use TAB key to jump to an element
+          - action: tab_key
+          # in case need to use ENTER key
+          - action: enter_key
+          - action: arrow_down
+          - action: arrow_up
+          # choose option-value from drop-down menu
+          - action: drop_down_menu
+            selector: 'CSS_SELECTOR_or_full_XPATH'
+            element: 'value_of_element: option value="6">Postpayment</option>'

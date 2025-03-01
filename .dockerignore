@@ -1,0 +1,8 @@
+# Local results, reports and unfinished funcs
+reports/
+cms_try_to_find.py
+cms_detection.log
+main_dismissed.py
+run_chrome_func.py
+run_firefox_func.py
+Website.xlsx

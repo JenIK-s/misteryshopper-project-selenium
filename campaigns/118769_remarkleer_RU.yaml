@@ -1,0 +1,33 @@
+remarkleer_RU:
+  - campaign_id: 118769
+    test_case:
+      - title: 'Deeplink'
+        steps:
+          # target url, should be a deeplink to product page
+          - action: goto
+            url: 'https://grfpr.com/g/cgtihyl9apb7e165239403e9fc18b2/?erid=2VSb5w4f7rp&ulp=https%3A%2F%2Fremarklee.ru%2Fcatalog%2Finternet_magazin_2_0%2F03_podarochnye_nabory%2Fnabor-rodnoy%2F'
+          - action: arrow_down
+          - action: click_add_to_cart
+            selector: '#bx_117848907_17465_add_basket_link > span > span'
+          - action: goto
+            url: 'https://remarklee.ru/personal/order/make/'
+          - action: scroll
+          - action: click_object
+            selector: '/html/body/div[2]/div/div/div/form/div/div[1]/div[2]/div[1]/div[2]/div[1]/div/button/span[1]'
+          - action: click_object
+            selector: '/html/body/div[2]/div/div/div/form/div/div[1]/div[2]/div[1]/div[2]/div[1]/div/div[2]/div/div/div/div'
+          - action: tab_key
+          - action: click_object
+            selector: '/html/body/div[2]/div/div/div/form/div/div[1]/div[2]/div[1]/div[2]/div[1]/div/div[2]/div/div/div/div/div[2]/div[1]/div/div[1]/div[1]/div[1]/div/div[1]/div[1]/input[2]'
+          - action: type_in_data
+            selector: '/html/body/div[2]/div/div/div/form/div/div[1]/div[2]/div[1]/div[2]/div[1]/div/div[2]/div/div/div/div/div[2]/div[1]/div/div[1]/div[1]/div[1]/div/div[1]/div[1]/input[2]'
+            text: 'Москва'
+          - action: wait
+            value: '2'
+          - action: enter_key
+          - action: wait
+            value: '2'
+          - action: click_object
+            selector: '#bx-soa-region > div.modals > div > div > div > div > div.modal__body.modal__data > div.modal__new-btns > button.modal-close.btn--black'
+          - action: wait
+            value: '3'

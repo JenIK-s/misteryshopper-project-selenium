@@ -1,0 +1,80 @@
+donnerdeal_en:
+  - campaign_id: 26000
+    steps:
+      # - title: deeplink
+      # target url, should be a deeplink to product page
+      - action: goto
+        url: 'https://dhwnh.com/g/11pkisav6ib7e165239454f7a9dbf9/?ulp=https%3A%2F%2Fus.donnermusic.com%2Fproducts%2Fdonner-multi-effects-pedal-guitar-pedals'
+      # in case there is a popup which can be closed with ESCAPE button
+      - action: wait
+      - action: close_popup_window
+        selector: '#cartx-wrap > div.cartx-a > div > div > div.cartx-b-close > svg > path'
+      # add product to cart
+      - action: click_add_to_cart
+        selector: '/html/body/main/div[1]/section/div[1]/div[2]/div/div[3]/div/div[2]/form/div[5]/button[1]'
+      # cart URL to open cart
+      - action: goto
+        url: 'https://us.donnermusic.com/cart'
+      - action: click_object
+        selector: '/html/body/main/div[1]/section/div[2]/div/div/div/div[2]/div/div[1]/div/form/button'
+      - action: type_in_data
+        selector: '/html/body/div[1]/div[1]/div/div[1]/div[2]/div[1]/div/main/div/form/div[1]/div[1]/section/div[3]/div[1]/div/div/div[3]/div[1]/div/div/div/input'
+        text: 'testings@testmail.com'
+      - action: type_in_data
+        selector: '/html/body/div[1]/div[1]/div/div[1]/div[2]/div[1]/div/main/div/form/div[1]/div[2]/div/section/div/div[2]/section/div/div/div[1]/div/div/div/div[1]/div[2]/div[1]/div/div/input'
+        text: 'Testing'
+      - action: type_in_data
+        selector: '/html/body/div[1]/div[1]/div/div[1]/div[2]/div[1]/div/main/div/form/div[1]/div[2]/div/section/div/div[2]/section/div/div/div[1]/div/div/div/div[1]/div[2]/div[2]/div/div/input'
+        text: 'Testings'
+      - action: type_in_data
+        selector: '/html/body/div[1]/div[1]/div/div[1]/div[2]/div[1]/div/main/div/form/div[1]/div[2]/div/section/div/div[2]/section/div/div/div[1]/div/div/div/div[1]/div[4]/div/div/div/div/div/div/input'
+        text: 'testing address 111'
+      - action: type_in_data
+        selector: '/html/body/div[1]/div[1]/div/div[1]/div[2]/div[1]/div/main/div/form/div[1]/div[2]/div/section/div/div[2]/section/div/div/div[1]/div/div/div/div[1]/div[6]/div[1]/div/div/input'
+        text: 'New York'
+      - action: click_object # state
+        selector: '/html/body/div[1]/div[1]/div/div[1]/div[2]/div[1]/div/main/div/form/div[1]/div[2]/div/section/div/div[2]/section/div/div/div[1]/div/div/div/div[1]/div[6]/div[2]/div/div/select'
+      - action: type_in_data
+        selector: '/html/body/div[1]/div[1]/div/div[1]/div[2]/div[1]/div/main/div/form/div[1]/div[2]/div/section/div/div[2]/section/div/div/div[1]/div/div/div/div[1]/div[6]/div[3]/div/div/div/input'
+        text: '33101'
+      - action: type_in_data
+        selector: '/html/body/div[1]/div[1]/div/div[1]/div[2]/div[1]/div/main/div/form/div[1]/div[2]/div/section/div/div[2]/section/div/div/div[1]/div/div/div/div[1]/div[7]/div/div/div/div/input'
+        text: '407-408-7313'
+      - action: click_object  # payment option
+        selector: '/html/body/div[1]/div[1]/div/div[1]/div[2]/div[1]/div/main/div/form/div[1]/section/div[1]/div/div/div/div[2]/div/div[1]/div/div/div/div[3]/div[1]/div[1]/div/input'
+# second iteration
+      # target url, should be a deeplink to product page
+      - action: goto
+        url: 'https://us.donnermusic.com/products/donner-multi-effects-pedal-guitar-pedals'
+      # in case there is a popup which can be closed with ESCAPE button
+      # add product to cart
+      - action: click_add_to_cart
+        selector: '/html/body/main/div[1]/section/div[1]/div[2]/div/div[3]/div/div[2]/form/div[5]/button[1]'
+      # cart URL to open cart
+      - action: goto
+        url: 'https://us.donnermusic.com/cart'
+      - action: make_screenshot
+      - action: click_object
+        selector: '/html/body/main/div[1]/section/div[2]/div/div/div/div[2]/div/div[1]/div/form/button'
+      - action: click_object  # phone number input
+        selector: '/html/body/div[1]/div[1]/div/div[1]/div[2]/div[1]/div/main/div/form/div[1]/div[2]/div/section/div/div[2]/section/div/div/div[1]/div/div/div/div[1]/div[7]/div/div/div/div/input'
+      - action: scroll
+      - action: scroll
+      - action: click_object  # payment option
+        selector: '/html/body/div[1]/div[1]/div/div[1]/div[2]/div[1]/div/main/div/form/div[1]/section/div[1]/div/div/div/div[2]/div/div[1]/div/div/div/div[1]/div[1]/div[1]/div/input'
+      - action: tab
+      - action: wait
+      - action: scroll
+      - action: simple_type_in
+        text: '1234432112344321'
+      - action: tab
+      - action: wait
+#      - action: tab_key
+#      - action: type_in_data
+#        selector: '/html/body/div[1]/div[1]/div/div[1]/div[2]/div[1]/div/main/div/form/div[1]/section/div[1]/div/div/div/div[2]/div/div[1]/div/div/div/div[1]/div[2]/div/div/div/div/div/div/div[1]/div/div/div[2]/div[1]/div/div/div'
+#        text: '02/27'
+#      - action: type_in_data
+#        selector: '/html/body/div[1]/div[1]/div/div[1]/div[2]/div[1]/div/main/div/form/div[1]/section/div[1]/div/div/div/div[2]/div/div[1]/div/div/div/div[1]/div[2]/div/div/div/div/div/div/div[1]/div/div/div[2]/div[2]/div/div/div'
+#        text: '777'
+      - action: click_confirm_order
+        selector: '/html/body/div[1]/div[1]/div/div[1]/div[2]/div[1]/div/main/div/form/div[1]/section/div[2]/div/div/div/div[1]/div[2]/div/div/div/button'

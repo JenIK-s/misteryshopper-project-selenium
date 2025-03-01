@@ -1,0 +1,29 @@
+kingstyleb_BY:
+  - campaign_id: 100874
+    test_case:
+      - title: 'Deeplink'
+        steps:
+          # target url, should be a deeplink to product page
+          - action: goto
+            url: 'https://zejcl.com/g/n0pqzt6czcb7e1652394102ac5191d/?ulp=https%3A%2F%2Fkingstyle.by%2Fofisnaya-mebel%2Fstoly%2Fpodemnyy-stol-sparx-up-dual-black%2F'
+          - action: click_add_to_cart
+            selector: '/html/body/main/div[2]/div/div[2]/div/div[1]/form/a'
+          - action: goto
+            url: 'https://kingstyle.by/cart/'
+          - action: scroll
+          - action: scroll
+          - action: scroll
+          - action: scroll
+          - action: scroll
+          - action: scroll
+          - action: type_in_data
+            selector: '#basket_form > div > div:nth-child(9) > input'
+            text: 'Тестовый тест'
+          - action: type_in_data
+            selector: '/html/body/main/div[2]/section/div[2]/div[1]/div/div[2]/div/div[2]/div[1]/form/div/div[4]/input'
+            text: '375 (11) 233-45-55'
+          - action: type_in_data
+            selector: '/html/body/main/div[2]/section/div[2]/div[1]/div/div[2]/div/div[2]/div[1]/form/div/div[5]/input'
+            text: 'testings@testmail.com'
+          - action: wait
+            value: '5'

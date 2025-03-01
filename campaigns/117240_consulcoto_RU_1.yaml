@@ -1,0 +1,136 @@
+consulcoto_RU_1:
+  - campaign_id: 117240
+    test_case:
+      - title: 'Deeplink'
+        steps:
+          - action: goto
+            url: 'https://www.browserscan.net/bot-detection'
+#            url: 'https://www.hapag-lloyd.com/en/home.html'
+#            url: 'https://opensea.io/'
+#            url: 'https://nowsecure.nl'
+          - action: wait
+          - action: make_screenshot
+          - action: wait
+#            url: 'https://dkfrh.com/g/y7z5t53ap7b7e1652394ede5feb608/?erid=2bL9aMPo2e49hMef4piUd2yMfx&ulp=https%3A%2F%2Fconsul-coton.ru%2Fsoft-furniture%2Fzerkalo-standart-pryamougolnik.html'
+          # - action: close_popup_window
+          - action: scroll
+          - action: click_add_to_cart
+            selector: 'body > div.wrapper.js-wrapper > div.middle > div > div > div > div > div.detail__row > div.detail__right > div > div.detail-desc__panel.js-product_detail-params > div.detail-button.detail-button_type_tile > a.detail-button__buy.js-add2basket.js-add2basket-detail'
+          - action: goto
+            url: 'https://consul-coton.ru/cart/'
+          - action: make_screenshot
+          - action: scroll
+      - title: 'Repeat_order'
+        steps:
+          - action: goto
+            url: 'https://consul-coton.ru'
+          # - action: close_popup_window
+          - action: scroll
+#          - action: click_add_to_cart
+#            selector: 'body > div.wrapper.js-wrapper > div.middle > div > div > div > div > div.detail__row > div.detail__right > div > div.detail-desc__panel.js-product_detail-params > div.detail-button.detail-button_type_tile > a.detail-button__buy.js-add2basket.js-add2basket-detail'
+          - action: goto
+            url: 'https://consul-coton.ru/cart/'
+#          - action: make_screenshot
+#          - action: scroll
+      - title: 'Another_test'
+        steps:
+          - action: goto
+            url: 'https://consul-coton.ru?utm_source=testchannel&utm_medium=affiliate'
+          # - action: close_popup_window
+          - action: scroll
+          #          - action: click_add_to_cart
+          #            selector: 'body > div.wrapper.js-wrapper > div.middle > div > div > div > div > div.detail__row > div.detail__right > div > div.detail-desc__panel.js-product_detail-params > div.detail-button.detail-button_type_tile > a.detail-button__buy.js-add2basket.js-add2basket-detail'
+          - action: goto
+            url: 'https://consul-coton.ru/cart/'
+
+
+
+
+    #      - action: type_in_data
+    #        selector: '#ORDER_PROP_27'
+    #        text: 'Тэст'
+    #      - action: type_in_data
+    #        selector: '#ORDER_PROP_1'
+    #        text: 'Тэст'
+    #      - action: type_in_data
+    #        selector: '#ORDER_PROP_2'
+    #        text: 'testings@testmail.com'
+    #      - action: type_in_data
+    #        selector: '#ORDER_PROP_3'
+    #        text: '91234567890'
+    #      - action: type_in_data
+    #        selector: '#ORDER_PROP_6'
+    #        text: 'Москва'
+    #      - action: type_in_data
+    #        selector: '#ORDER_PROP_9'
+    #        text: 'Ленская'
+    #      - action: type_in_data
+    #        selector: '#ORDER_PROP_10'
+    #        text: '21'
+    #      - action: scroll
+    #      - action: drop_down_menu
+    #        selector: '#order_form_content > div > div.basket__left.basket__left_mb-mob > div > div:nth-child(4) > div.basket-form__row > div > div:nth-child(1) > div > div > select'
+    #        element: '142'
+    #      - action: scroll
+    #      - action: wait
+    #      - action: drop_down_menu
+    #        selector: '//*[@id="order_form_content"]/div/div[5]/div/div[4]/div[2]/div/div[1]/div/div/select'
+    #        element: '17'
+    #      - action: wait
+    #      - action: type_in_data
+    #        selector: '#ORDER_DESCRIPTION'
+    #        text: 'ТЕСТОВЫЙ ЗАКАЗ! ПРОСЬБА ОТМЕНИТЬ И ИГНОРИРОВАТЬ!'
+          - action: wait
+    #      - action: click_confirm_order
+    #        selector: '#ORDER_CONFIRM_BUTTON'
+    #      - action: wait
+    #      - action: make_screenshot
+
+
+    #      - action: test_case
+    #      - title: 'Deeplink'
+    #      - action: goto
+    #        url: 'https://dkfrh.com/g/y7z5t53ap7b7e1652394ede5feb608/?erid=2bL9aMPo2e49hMef4piUd2yMfx&ulp=https%3A%2F%2Fconsul-coton.ru%2Fsoft-furniture%2Fzerkalo-standart-pryamougolnik.html'
+    #      # - action: close_popup_window
+    #      - action: scroll
+    #      - action: click_add_to_cart
+    #        selector: 'body > div.wrapper.js-wrapper > div.middle > div > div > div > div > div.detail__row > div.detail__right > div > div.detail-desc__panel.js-product_detail-params > div.detail-button.detail-button_type_tile > a.detail-button__buy.js-add2basket.js-add2basket-detail'
+    #      - action: goto
+    #        url: 'https://consul-coton.ru/cart/'
+    #      - action: make_screenshot
+    #      - action: scroll
+    #      - action: type_in_data
+    #        selector: '#ORDER_PROP_27'
+    #        text: 'Тэст'
+    #      - action: type_in_data
+    #        selector: '#ORDER_PROP_1'
+    #        text: 'Тэст'
+    #      - action: type_in_data
+    #        selector: '#ORDER_PROP_2'
+    #        text: 'testings@testmail.com'
+    #      - action: type_in_data
+    #        selector: '#ORDER_PROP_3'
+    #        text: '91234567890'
+    #      - action: type_in_data
+    #        selector: '#ORDER_PROP_6'
+    #        text: 'Москва'
+    #      - action: type_in_data
+    #        selector: '#ORDER_PROP_9'
+    #        text: 'Ленская'
+    #      - action: type_in_data
+    #        selector: '#ORDER_PROP_10'
+    #        text: '21'
+    #      - action: scroll
+    #      - action: drop_down_menu
+    #        selector: '#order_form_content > div > div.basket__left.basket__left_mb-mob > div > div:nth-child(4) > div.basket-form__row > div > div:nth-child(1) > div > div > select'
+    #        element: '142'
+    #      - action: scroll
+    #      - action: wait
+    #      - action: drop_down_menu
+    #        selector: '//*[@id="order_form_content"]/div/div[5]/div/div[4]/div[2]/div/div[1]/div/div/select'
+    #        element: '17'
+    #      - action: wait
+    #      - action: type_in_data
+    #        selector: '#ORDER_DESCRIPTION'
+    #        text: 'ТЕСТОВЫЙ ЗАКАЗ! ПРОСЬБА ОТМЕНИТЬ И ИГНОРИРОВАТЬ!'
+    #      - action: wait

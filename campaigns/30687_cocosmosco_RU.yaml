@@ -1,0 +1,52 @@
+cocosmosco_RU:
+  - campaign_id: 30687
+    test_case:
+      - title: 'Deeplink'
+        steps:
+          # target url, should be a deeplink to product page
+          - action: goto
+            url: 'https://ntzgd.com/g/b4yjoieegkb7e1652394c8a37829f9/?erid=5jtCeReNwxHpfQTFQx17EZL&ulp=https%3A%2F%2Fcocos-moscow.ru%2Fcatalog%2Fplatya_i_sarafany%2Fplate_maksi_bez_rukavov_so_stoykoy_chernyy%2F'
+          - action: wait
+            value: '10'
+          - action: close_popup_window
+          - action: click_add_to_cart
+            selector: '#bx_117848907_13545_add_basket_link'
+          - action: goto
+            url: 'https://cocos-moscow.ru/basket/'
+          - action: click_confirm_order
+            selector: '#basket-root > div:nth-child(3) > div > div.basket-checkout-block.basket-checkout-block-btn > button'
+          - action: wait
+            value: '15'
+          - action: close_popup_window
+          - action: click_object
+            selector: '#bx-soa-paysystem > div.bx-soa-section-title-container.d-flex.justify-content-between.align-items-center.flex-nowrap > div:nth-child(2) > a'
+          - action: click_object
+            selector: '#bx-soa-paysystem > div.bx-soa-section-content.container-fluid > div.bx-soa-pp.row > div.order-md-1.order-2.col-md-7.bx-soa-pp-item-container > div > div:nth-child(3) > div.bx-soa-pp-company-graf-container > div'
+          - action: wait
+            value: '5'
+          - action: scroll
+          - action: click_object
+            selector: '#bx-soa-properties > div.bx-soa-section-title-container.d-flex.justify-content-between.align-items-center.flex-nowrap > div:nth-child(2) > a'
+          - action: scroll
+          - action: type_in_data
+            selector: '#soa-property-1'
+            text: 'TEEEST testov Testovich'
+          - action: type_in_data
+            selector: '#soa-property-2'
+            text: 'TEEEST@gmail.ru'
+          - action: type_in_data
+            selector: '#soa-property-3'
+            text: '91234567890'
+          - action: scroll
+          - action: type_in_data
+            selector: '#soa-property-7'
+            text: 'Москва, Ленская, 21'
+          - action: type_in_data
+            selector: '#orderDescription'
+            text: 'TEST order'
+          - action: scroll
+          - action: click_object
+            selector: '#bx-soa-orderSave > a'
+          - action: wait
+            value: '10'
+          - action: make_screenshot
